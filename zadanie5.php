@@ -20,7 +20,7 @@ $stareDane = fread($fp, filesize("plik.txt"));
 
 fclose($fp);
 
-$noweDane  = $_POST["opinia"];
+$noweDane = date("d-m-Y G:i:s").$_POST["opinia"]."\n\n";
 $noweDane .= $stareDane;
 
 $fp = fopen("plik.txt", "w");
