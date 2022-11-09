@@ -12,8 +12,6 @@
             <input type="submit" value="wyslij">
             <p>Dotychczasowe opinie:</p>
         </form>
-
-
         <?php
     
 $plik2 = "plik.txt";
@@ -40,7 +38,8 @@ echo "<br>" .$noweDane. "<br>";
     //licznik
 
 $plik = "licznik.txt";
-     
+    /* 
+
 if (!file_exists($plik)) {
     $f = fopen($plik, "w");
     fwrite($f,"0");
@@ -56,10 +55,20 @@ fclose($f);
   fwrite($f, $licznik);
   fclose($f); 
 
-echo "Jesteś " .$licznik. " odwiedzajacym na tej stronie.";
+*/
+  if(!isset($_COOKIE['licznik']))
+  {
+    $licznik=file_get_contents("licznik.txt");
+    $licznik++;
+    file_put_contents("licznik.txt",$licznik);
+    setcookie("licznik",$licznik);
+  }
+  else if(isset($_COOKIE['licznik']))
+  {
+    $licznik=file_get_contents("licznik.txt");
+    echo "Jesteś " .$licznik. " odwiedzajacym na tej stronie.";
+  }
 
-
-
-        ?>
+    ?>
     </body>
 </html>
