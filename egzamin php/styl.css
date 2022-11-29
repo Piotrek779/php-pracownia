@@ -1,0 +1,46 @@
+body {
+    font-family: Georgia;
+}
+#baner {
+    background-color: #005B4F;
+    color: white;
+    text-align: center;
+    font-size: 50%;
+    height: 20px;
+}
+#glowny {
+    background-color:  #E1E2E1;
+    height: 400px;
+    padding: 20px;
+    overflow: scroll;
+}
+#stopka_l, #stopka_p {
+    color: white;
+    background-color: #005B4F;
+    text-align: center;
+    width: 50%;
+    height: 20px;
+    float: left;
+}
+
+a {
+    color: white;
+}
+.zdjecie {
+    width: 20%;
+    float: left;
+}
+.opis {
+    float: left;
+}
+.linia {
+    clear: both;
+}
+img {
+    padding: 20px;
+    border-radius: 100%;
+}
+h2 {
+    text-align: center;
+    background: #00897B;
+}
